@@ -67,7 +67,7 @@ def build_gan(generator, discriminator):
     return gan
 
 # Training the GAN
-def train(epochs, batch_size=128, save_interval=50, data_dir=r'C:/Users/DELL/Desktop/Interview for Generative AI Engineer Position/Deeplearning/celeba/img_align_celeba/img_align_celeba'):
+def train(epochs, batch_size=128, save_interval=50, data_dir=r'/workspaces/Deeplearning/celeba/img_align_celeba/img_align_celeba'):
     X_train = load_data(data_dir)
     half_batch = int(batch_size / 2)
     generator = build_generator()
@@ -119,4 +119,4 @@ def save_imgs(generator, epoch, image_grid_rows=4, image_grid_columns=4):
 
 # Main function to run the training
 if __name__ == '__main__':
-    train(epochs=10000, batch_size=64, save_interval=200, data_dir=r'C:/Users/DELL/Desktop/Interview for Generative AI Engineer Position/Deeplearning/celeba/img_align_celeba/img_align_celeba')
+    train(epochs=10000, batch_size=64, save_interval=200, data_dir=r'/workspaces/Deeplearning/celeba/img_align_celeba/img_align_celeba')
